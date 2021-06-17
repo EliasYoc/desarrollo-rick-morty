@@ -1,0 +1,15 @@
+.container-notfoud {
+  background-color: var(--second-bg-color);
+  width: 100%;
+  height: calc(100vh - 50px);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--second-text);
+}
+.container-notfoud img {
+  width: 300px;
+  height: 300px;
+}

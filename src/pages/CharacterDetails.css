@@ -1,0 +1,71 @@
+.container-character-details {
+  background-color: var(--third-bg-color);
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-container {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--second-bg-color);
+  display: flex;
+  animation: show 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+@keyframes show {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.card-container_img {
+  display: flex;
+}
+.card-container_img img {
+  width: 100%;
+}
+.info-container-right {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.info-container-right > * {
+  padding: 0 10px;
+}
+.info-container-right .title {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.info-container-right .name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.info-container-right .title.dead {
+  background-color: var(--shadow-color-dead);
+  color: var(--white-to-black);
+}
+.info-container-right .title.alive {
+  background-color: var(--shadow-color-alive);
+  color: var(--black-to-white);
+}
+.info-container-right .title.unknow {
+  background-color: var(--shadow-color-unknown);
+  color: var(--white-to-black);
+}
+.info-container-right .info {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.info-container-right .info > p {
+  margin: 10px 0;
+}
+.info-container-right .info-cartoon {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
