@@ -9,6 +9,7 @@ import {
 import "./CharacterDetails.css";
 const CharacterDetails = () => {
   const value = useParams();
+  // console.log(value);
   const [characterSelected, setCharacterSelected] = useState({});
   const { errorMsg, setErrorMsg, isLoading, setIsLoading } =
     useContext(RickMortyContext);
@@ -18,7 +19,7 @@ const CharacterDetails = () => {
       try {
         setIsLoading(true);
         const res = await fetch(`${initialCharactersPage}/${value.id}`);
-        console.log(res);
+        // console.log(res);
         if (!res.ok) {
           let err = new Error("error");
           err.status = res.status;
@@ -31,14 +32,13 @@ const CharacterDetails = () => {
         setIsLoading(false);
       } catch (err) {
         setErrorMsg(err);
+        setIsLoading(false);
       }
     };
     getCharacter();
   }, [setErrorMsg, setIsLoading, value.id]);
   if (errorMsg.status)
-    return isLoading ? (
-      <Loader />
-    ) : (
+    return (
       <div className="container-character-details">
         <div className="card-container">
           <MessageError
@@ -55,7 +55,7 @@ const CharacterDetails = () => {
         <Loader />
       ) : (
         <article className="card-container">
-          {console.log(characterSelected)}
+          {/* {console.log(characterSelected)} */}
           <div className="card-container_img">
             <img src={characterSelected.image} alt="" />
           </div>
@@ -80,7 +80,7 @@ const CharacterDetails = () => {
                 {characterSelected.gender}
               </p>
               <p>
-                <span className="name">specie: </span>{" "}
+                <span className="name">species: </span>{" "}
                 {characterSelected.species}
               </p>
               <p>

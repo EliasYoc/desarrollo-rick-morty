@@ -26,13 +26,14 @@
   display: flex;
 }
 .card-container_img img {
+  object-fit: cover;
   width: 100%;
 }
 .info-container-right {
   width: 300px;
   display: flex;
   flex-direction: column;
-  position: relative;
+  justify-content: space-between;
 }
 .info-container-right > * {
   padding: 0 10px;
@@ -58,6 +59,7 @@
   color: var(--white-to-black);
 }
 .info-container-right .info {
+  flex: 1;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -66,6 +68,14 @@
 }
 .info-container-right .info-cartoon {
   width: 100%;
-  position: absolute;
-  bottom: 0;
+}
+.info-cartoon:last-child {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+@media only screen and (max-width: 380px) {
+  .card-container {
+    flex-direction: column;
+  }
 }

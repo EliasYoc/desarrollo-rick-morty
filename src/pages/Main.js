@@ -1,4 +1,3 @@
-import Aside from "../components/Aside";
 import CharactersContainer from "../components/CharactersContainer";
 import SearchCharacters from "../components/SearchCharacters";
 import "./Main.css";

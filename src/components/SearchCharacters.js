@@ -11,7 +11,7 @@ const SearchCharacters = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrorMsg({});
-    console.log(`${initialCharactersPage}?name=${inputText}`);
+    // console.log(`${initialCharactersPage}?name=${inputText}`);
     setCharacterPage(`${initialCharactersPage}?name=${inputText}`);
   };
   return (

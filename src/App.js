@@ -1,14 +1,15 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
 import RickMortyProvider from "./context/RickMortyContext";
 import Main from "./pages/Main";
 import "./App.css";
 import CharacterDetails from "./pages/CharacterDetails";
 import NotFound from "./pages/NotFound";
+
 function App() {
   return (
     <div className="App">
-      <Router>
+      <HashRouter>
         <RickMortyProvider>
           <Header />
           <Switch>
@@ -17,7 +18,7 @@ function App() {
             <Route path="*" component={NotFound} />
           </Switch>
         </RickMortyProvider>
-      </Router>
+      </HashRouter>
     </div>
   );
 }

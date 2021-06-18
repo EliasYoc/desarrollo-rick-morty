@@ -33,19 +33,16 @@ const RickMortyProvider = ({ children }) => {
           setDataCharacters([]);
           throw dtCharacters;
         }
-        console.log("despues del error");
+        // console.log("despues del error");
         setInfoNextPrev({
           prev: dtCharacters.info?.prev,
           next: dtCharacters.info?.next,
         });
 
         // console.log(dataCharacters.results, dataEpisodes);
-        console.log("encima de datacharacter");
         setDataCharacters(dtCharacters.results);
-        console.log("en medio de datacharacter");
         setDataEpisodes(dtEpisodes.results);
       } catch (error) {
-        console.log(error);
         setErrorMsg(error);
       }
     };
