@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: background 300ms ease;
 }
 html {
   --black-to-white: #000;
@@ -20,7 +21,17 @@ html {
   --shadow-color-unknown: rgb(90, 89, 89);
 }
 .dark {
-  --main-color: ;
+  --black-to-white: #fff;
+  --white-to-black: #000;
+
+  --main-text: #fff;
+  --second-text: rgb(232, 232, 232);
+  --main-bg-color: rgb(27, 230, 20);
+  --second-bg-color: rgb(49, 49, 49);
+  --third-bg-color: rgb(22, 22, 22);
+  --shadow-color-alive: rgb(63, 204, 58);
+  --shadow-color-dead: rgb(218, 55, 88);
+  --shadow-color-unknown: rgb(136, 132, 132);
 }
 
 body {

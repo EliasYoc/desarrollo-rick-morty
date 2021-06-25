@@ -4,12 +4,23 @@ header {
   height: 50px;
   display: flex;
   justify-content: center;
+  align-items: center;
   position: sticky;
   top: 0;
   z-index: 999;
   box-shadow: 1px 10px 61px 10px var(--main-bg-color);
 }
+
 header img {
   height: 100px;
+  margin-top: 50px;
   cursor: pointer;
+}
+@media only screen and (max-width: 500px) {
+  header {
+    justify-content: space-between;
+  }
+  header img {
+    height: 80px;
+  }
 }

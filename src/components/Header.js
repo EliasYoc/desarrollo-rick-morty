@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import logo from "../assets/RickAndMorty.png";
 import { RickMortyContext } from "../context/RickMortyContext";
 import "./Header.css";
+import ToggleDarkMode from "./ToggleDarkMode";
+
 const Header = () => {
   const { setErrorMsg, setCharacterPage } = useContext(RickMortyContext);
   const handleClicImg = () => {
@@ -11,6 +13,7 @@ const Header = () => {
   };
   return (
     <header>
+      <ToggleDarkMode />
       <Link to="/">
         <img onClick={handleClicImg} src={logo} alt="" />
       </Link>

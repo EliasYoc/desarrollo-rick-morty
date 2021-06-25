@@ -1,0 +1,60 @@
+.toggle {
+  width: 50px;
+  height: 20px;
+  background-color: var(--third-bg-color);
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.toggle__container {
+  display: flex;
+  align-items: center;
+  /* background-color: crimson; */
+  height: 100%;
+}
+.toggle__sun {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgb(241, 229, 57);
+  margin: 0 5px;
+}
+.toggle__moon {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgb(189, 226, 228);
+  position: relative;
+  margin: 0 5px;
+}
+.toggle__moon::after {
+  content: "";
+  top: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: var(--third-bg-color);
+  transition: background 300ms ease;
+}
+.toggle__switch {
+  position: absolute;
+  top: -2px;
+  left: 0px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--main-bg-color);
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.493);
+  transition: transform 300ms ease, left 300ms ease;
+  z-index: 1;
+}
+.dark .toggle__switch {
+  transform: translateX(-100%);
+  left: 100%;
+}
+@media only screen and (max-width: 500px) {
+  .toggle {
+    margin-left: 10px;
+  }
+}
