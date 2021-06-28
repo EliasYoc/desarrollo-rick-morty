@@ -43,6 +43,7 @@
   padding-bottom: 1rem;
 }
 .info-container-right .name {
+  color: var(--black-to-white);
   font-size: 1rem;
   font-weight: bold;
 }
@@ -57,6 +58,9 @@
 .info-container-right .title.unknow {
   background-color: var(--shadow-color-unknown);
   color: var(--white-to-black);
+}
+.info-container-right p {
+  color: var(--second-text);
 }
 .info-container-right .info {
   flex: 1;

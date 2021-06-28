@@ -14,7 +14,7 @@ html {
   --second-text: rgb(46, 46, 46);
   --main-bg-color: #00afc8;
   --second-bg-color: #cfe6d0;
-  --third-bg-color: #f0f0f0;
+  --third-bg-color: #e8e8e8;
   --shadow-isalive-px: 0px 0px 5px 2px;
   --shadow-color-alive: rgb(27, 230, 20);
   --shadow-color-dead: crimson;
@@ -28,7 +28,7 @@ html {
   --second-text: rgb(232, 232, 232);
   --main-bg-color: rgb(27, 230, 20);
   --second-bg-color: rgb(49, 49, 49);
-  --third-bg-color: rgb(22, 22, 22);
+  --third-bg-color: rgb(28, 28, 28);
   --shadow-color-alive: rgb(63, 204, 58);
   --shadow-color-dead: rgb(218, 55, 88);
   --shadow-color-unknown: rgb(136, 132, 132);
