@@ -9,12 +9,14 @@ header {
   top: 0;
   z-index: 999;
   box-shadow: 1px 10px 61px 10px var(--main-bg-color);
+  transition: 0.3s;
 }
 
 header img {
   height: 100px;
   margin-top: 50px;
   cursor: pointer;
+  transition: 0.3s;
 }
 @media only screen and (max-width: 500px) {
   header {

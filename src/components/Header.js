@@ -12,10 +12,10 @@ const Header = () => {
     setErrorMsg({});
   };
   return (
-    <header>
+    <header id="header">
       <ToggleDarkMode />
       <Link to="/">
-        <img onClick={handleClicImg} src={logo} alt="" />
+        <img id="header__img" onClick={handleClicImg} src={logo} alt="" />
       </Link>
     </header>
   );

@@ -7,6 +7,7 @@ import {
   RickMortyContext,
 } from "../context/RickMortyContext";
 import "./CharacterDetails.css";
+
 const CharacterDetails = () => {
   const value = useParams();
   // console.log(value);
@@ -14,6 +15,17 @@ const CharacterDetails = () => {
   const { errorMsg, setErrorMsg, isLoading, setIsLoading } =
     useContext(RickMortyContext);
 
+  // No se si esta bien animar el header manipulando el DOM así, no supe usar useRef en Header desde este component.
+  useEffect(() => {
+    const $header = document.querySelector("#header");
+    const $img = document.querySelector("#header__img");
+    $header.classList.add("big-header");
+    $img.classList.add("mg-tp-img");
+    return () => {
+      $header.classList.remove("big-header");
+      $img.classList.remove("mg-tp-img");
+    };
+  }, []);
   useEffect(() => {
     const getCharacter = async () => {
       try {

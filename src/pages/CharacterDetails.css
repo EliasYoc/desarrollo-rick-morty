@@ -1,11 +1,18 @@
+.big-header {
+  height: 100px;
+}
+.mg-tp-img {
+  margin: 0;
+}
 .container-character-details {
   background-color: var(--third-bg-color);
   width: 100%;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 100px);
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .card-container {
   border-radius: 10px;
   overflow: hidden;
