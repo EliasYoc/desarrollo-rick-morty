@@ -1,6 +1,6 @@
 .character {
   max-width: 300px;
-
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.562);
   position: relative;
   background-color: var(--second-bg-color);
   border-radius: 10px;
@@ -23,13 +23,13 @@
   width: 100%;
   height: 100%;
 }
-.character.isAlive {
+.character:hover.isAlive {
   box-shadow: var(--shadow-isalive-px) var(--shadow-color-alive);
 }
-.character.isDeath {
+.character:hover.isDeath {
   box-shadow: var(--shadow-isalive-px) var(--shadow-color-dead);
 }
-.character.unknown {
+.character:hover.unknown {
   box-shadow: var(--shadow-isalive-px) var(--shadow-color-unknown);
 }
 .character_container {
