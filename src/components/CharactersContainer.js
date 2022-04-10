@@ -4,11 +4,12 @@ import Character from "./Character";
 import Loader from "./Loader";
 import "./CharactersContainer.css";
 import MessageError from "./MessageError";
+import { motion, AnimatePresence } from "framer-motion";
 
 const CharactersContainer = () => {
   const {
     errorMsg,
-    dataCharacters,
+    filteredCharacters,
     isLoading,
     setCharacterPage,
     infoNextPrev,
@@ -49,17 +50,26 @@ const CharactersContainer = () => {
         </div>
       )}
 
-      <section
+      <motion.section
+        layout="size"
+        transition={{
+          type: "spring",
+          mass: 0.5,
+          bounce: 0,
+          duration: 0.5,
+        }}
         className={`characters-container ${isLoading ? "dis-flex-center" : ""}`}
       >
         {isLoading ? (
           <Loader />
         ) : (
-          dataCharacters?.map((character) => (
-            <Character key={character.id} character={character} />
-          ))
+          <AnimatePresence>
+            {filteredCharacters?.map((character) => (
+              <Character key={character.id} character={character} />
+            ))}
+          </AnimatePresence>
         )}
-      </section>
+      </motion.section>
     </div>
   );
 };

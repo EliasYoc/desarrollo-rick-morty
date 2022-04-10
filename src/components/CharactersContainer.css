@@ -1,6 +1,5 @@
 .container {
   position: relative;
-  background-color: crimson;
 }
 
 .container_btns {
@@ -47,6 +46,7 @@
   padding: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 3rem;
+  min-height: 400px;
 }
 .characters-container.dis-flex-center {
   display: flex;

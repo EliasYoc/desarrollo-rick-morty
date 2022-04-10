@@ -18,11 +18,53 @@ header img {
   cursor: pointer;
   transition: 0.3s;
 }
+.filterwrap {
+  color: var(--main-bg-color);
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+.filterbox {
+  color: var(--second-text);
+  background-color: var(--second-bg-color);
+  display: flex;
+  flex-direction: column;
+  margin: 0.3rem;
+  position: absolute;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  left: 0;
+  top: 100%;
+}
+
+.filterbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+.filterbox.closed {
+  opacity: 0;
+  visibility: visible;
+}
+.filterbox > span {
+  padding: 0.3rem 0.5rem;
+  transition: padding 0.3s ease;
+}
+.filterbox > span:hover {
+  background: var(--third-bg-color);
+  cursor: pointer;
+  padding: 0.6rem 0.5rem;
+}
 @media only screen and (max-width: 500px) {
   header {
     justify-content: space-between;
   }
   header img {
     height: 80px;
+  }
+  .filterbox {
+    left: auto;
+    right: 0;
   }
 }

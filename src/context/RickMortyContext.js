@@ -7,6 +7,7 @@ export const initialCharactersPage =
   "https://rickandmortyapi.com/api/character";
 const RickMortyProvider = ({ children }) => {
   const [dataCharacters, setDataCharacters] = useState([]);
+  const [filteredCharacters, setFilteredCharacters] = useState([]);
   const [dataEpisodes, setDataEpisodes] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [characterPage, setCharacterPage] = useState(initialCharactersPage);
@@ -31,6 +32,7 @@ const RickMortyProvider = ({ children }) => {
 
         if (dtCharacters.err) {
           setDataCharacters([]);
+          setFilteredCharacters([]);
           throw dtCharacters;
         }
         // console.log("despues del error");
@@ -41,6 +43,8 @@ const RickMortyProvider = ({ children }) => {
 
         // console.log(dataCharacters.results, dataEpisodes);
         setDataCharacters(dtCharacters.results);
+        setFilteredCharacters(dtCharacters.results);
+
         setDataEpisodes(dtEpisodes.results);
       } catch (error) {
         setErrorMsg(error);
@@ -52,6 +56,8 @@ const RickMortyProvider = ({ children }) => {
     <RickMortyContext.Provider
       value={{
         dataCharacters,
+        filteredCharacters,
+        setFilteredCharacters,
         dataEpisodes,
         isLoading,
         setIsLoading,
